@@ -6,32 +6,82 @@
     <title>Muni - Welcome</title>
     <style>
         /* Import font */
-        @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Open Sans');
+        @import url('https://fonts.googleapis.com/css?family=Playfair Display');
         /* Set up general styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom right, #FA4050, #0077C0);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-color: #FA4050; */
         }
+
+        .main-container{
+            display: block;
+            align-self: center;
+            max-width: 250%;
+            padding: 5%;
+            height: 100vh;
+        }
+
+        .container-logo {
+            display: block;
+            align-self: center;
+            max-width: 250%;
+            /* height: 100vh; */
+            /* padding-top: 10%; */
+            /* justify-content: center;
+            align-items: center;*/
+            
+            /* padding-top: 15%; */
+        }
+
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            display: block;
+            align-self: center;
+            max-width: 250%;
+            height: auto;
+            padding: 5% 20% 0% 20%;
+            /* justify-content: center;
+            align-items: center;*/
+            
+            /* padding-top: 15%; */
         }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
         h1 {
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
             font-size: 40px;
             margin-bottom: 20px;
+            color: white;
         }
         p {
             font-size: 18px;
             line-height: 1.5;
             margin-bottom: 20px;
+            color: white
         }
         /* Set up button styling */
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #1c62b9;
+            background-color: #FA4050;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -42,13 +92,35 @@
         .button:hover {
             background-color: #2c78c8;
         }
+
+        a:link{
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color:#FA4050;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #fff;
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Muni</h1>
-        <p>Muni is diary app that lets you share your thoughts and feelings for the day and it has the capacity to detect the underlying emotion in an entry a user provides. In line with this you have access to the limited features of the available on the app. To access the full version of Muni, please <a href="#">sign up here</a>.</p>
-        <button class="button">Try Demo</button>
+    <div class="main-container">
+        <div class="container-logo">
+            <img src="static/logo.png" alt="Muni Emotion Classifier Logo" class="logo">
+        </div>
+        <div class="container">
+            <h1>Welcome to Muni</h1>
+            <p><a href='/about'>About Muni</a> | <a href="https://code4youth-platform.bemyapp.com/#/projects/6418e529a22a2cf2e7a7407a">HCL Hackathon</a></p>
+            <p>Muni is an AI-powered diary and self-care app where you can share your thoughts and feelings! Let Muni help you out by providing self-care tips once it detects your emotions from your diary entries!</p>
+            <p>You need to <a href="https://forms.gle/ddytmHpHJuuUDWpZ6" style="text-decoration: underline;">sign up for full access</a> of Muni! Fortunately, you can try out a limited version of the app by clicking the “Try Demo” button below.</p>
+            <button class="button">Try Demo</button>
+        </div>
     </div>
 
     <script>
@@ -56,6 +128,7 @@
         button.addEventListener('click', () => {
             window.location.href = '/classifier';
         })
+
     </script>
 
 

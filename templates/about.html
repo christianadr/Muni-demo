@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muni - Welcome</title>
+    <style>
+        /* Import font */
+        @import url('https://fonts.googleapis.com/css?family=Open Sans');
+        @import url('https://fonts.googleapis.com/css?family=Playfair Display');
+        /* Set up general styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom right, #FA4050, #0077C0);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-color: #FA4050; */
+        }
+
+        .main-container{
+            display: block;
+            align-self: center;
+            max-width: 250%;
+            padding: 5%;
+            padding-bottom: 0%;
+        }
+
+        .container-head {
+            display: block;
+            align-self: center;
+            max-width: 250%;
+            /* height: 100vh; */
+            /* padding-top: 10%; */
+            /* justify-content: center;
+            align-items: center;*/
+            
+            /* padding-top: 15%; */
+        }
+
+        .container {
+            display: block;
+            align-self: center;
+            max-width: 250%;
+            height: auto;
+            padding: 5% 20% 0% 20%;
+            /* justify-content: center;
+            align-items: center;*/
+            
+            /* padding-top: 15%; */
+        }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .developerImage{
+            border-radius: 50%;
+            width: 50%;
+            height: 50%;
+            
+        
+        }
+
+    
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400px;
+            font-size: 20px;
+            color: white;
+            margin: 0%;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 12px;
+            margin-bottom: 25px;
+            color: white;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: white
+        }
+        /* Set up button styling */
+        .button {
+            padding: 10px 20px;
+            background-color: #FA4050;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #2c78c8;
+        }
+
+        .bottomRow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #divBtn{
+            padding: 20px;
+            text-align: center;
+        }
+
+        table{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            
+        
+        th{
+            max-width: 300px;
+        }
+
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+       }
+
+       .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom right, #FA4050, #0077C0);
+            transition: opacity 0.75s, visibility 0.75s;
+       }
+
+       .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 10px solid #0052A2;
+            border-top-color: #FA4050;
+            border-radius: 50%;
+            animation: loading 1s ease infinite
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="main-container">
+        <!-- <div class="container-logo">
+            <img src="static/logo.png" alt="Muni Emotion Classifier Logo" class="logo">
+        </div> -->
+        <div class="container-head"><h1 style="text-align: center;">Meet the team!</h1>
+            <p style="padding: 0% 15% 0% 20%;">
+                The Muni Team composes of 3rd Year BS Computer Engineering students from 
+                Technological Instistute of the Philippines - Quezon City. As part of their
+                academic journey, they are currently developing their skills in Data Science
+                and Technopreneurship. With a passion for their craft and a desire to make a
+                positive impact on people's lives, Muni team is dedicated on creating innovative
+                techonologies that is not only useful, but also easy and accessible to everyone.
+            </p>
+            <br>
+        
+            <table>
+                <tr>
+                    <th>
+                        <img src="static/Ains.png" alt="Muni Emotion Classifier Logo" class="developerImage">
+                        <h2>Christian Del Rosario</h2>
+                        <h4>Student, Technological Institute<br>of the Philippines</h4>
+                    </th>
+                    <th>
+                        <img src="static/sam.jpg" alt="Muni Emotion Classifier Logo" class="developerImage">
+                        <h2>Sam Ryan Ruiz</h2>
+                        <h4>Student, Technological Institute<br>of the Philippines</h4>
+                    </th>
+                    <th>
+                        <img src="static/jerome.jpg" alt="Muni Emotion Classifier Logo" class="developerImage">
+                        <h2>Jerome Marbebe</h2>
+                        <h4>Student, Technological Institute<br>of the Philippines</h4>
+                    </th>
+                </tr>
+                <tr class="bottomRow">
+                    <th>
+                        <img src="static/kurt.jpg" alt="Muni Emotion Classifier Logo" class="developerImage">
+                        <h2>Kurt Daniel Macamay</h2>
+                        <h4>Student, Technological Institute<br>of the Philippines</h4>
+                    </th>
+                    <th>
+                        <img src="static/jerico.png" alt="Muni Emotion Classifier Logo" class="developerImage">
+                        <h2>Jerico Delos Reyes</h2>
+                        <h4>Student, Technological Institute<br>of the Philippines</h4>
+                    </th>
+                </tr>
+               
+            </table>
+        </div>
+        
+        </div>
+        <div class="container" id="divBtn">
+            <button class="button">Go back to Home</button>
+        </div>
+    </div>
+    
+    <script>
+
+        const loader = document.querySelector(".loader")
+
+        window.addEventListener("load", () => {
+
+            loader.classList.add("loader--hidden");
+            loader.addEventListener("transitioned", () => {
+                document.body.removeChild(loader);
+            })
+        })
+
+        const button = document.querySelector('.button');
+        button.addEventListener('click', () => {
+            window.location.href = '/';
+        })
+
+
+    </script>
+
+
+</body>
+</html>

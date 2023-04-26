@@ -7,7 +7,8 @@
     <title>Muni-Demo/home</title>
     <style>
 
-        @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Open Sans');
+        @import url('https://fonts.googleapis.com/css?family=Playfair Display');
 
         * {
             box-sizing: border-box;
@@ -16,11 +17,12 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-image: linear-gradient(to bottom right, #000B18, #0052A2);
+            font-family: 'Open Sans', sans-serif;
+            /* background-image: linear-gradient(to bottom right, #000B18, #0052A2); */
+            background: linear-gradient(to bottom right, #FA4050, #0077C0);
             height: 100%;
-        
-    
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .header {
@@ -34,6 +36,7 @@
             font-size: 48px;
             font-weight: bold;
             color: white;
+            font-family: 'Playfair Display', serif;
         }
 
         .logo {
@@ -137,7 +140,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to bottom right, #000B18, #0052A2);
+            background: linear-gradient(to bottom right, #FA4050, #0077C0);
             transition: opacity 0.75s, visibility 0.75s;
        }
 
@@ -168,14 +171,14 @@
         <div class="container" id="main-div">
             <div class="header">
                 <img src="static/logo.png" alt="Muni Emotion Classifier Logo" class="logo">
-                <h1 class=" title">Muni's Demo <br>Emotion Classifier</h1>
+                <h1 class=" title">Muni Diary <br>App Demo</h1>
             </div>
             
             <div class="form-container">
-                <h1>Muni Emotion Classifier</h1>
+                <h1 style="font-family: Playfair Display;">Jot down your thoughts</h1>
                 <form method='POST' action="/predict">
-                    <label for="input_text">Input a text to classify</label>
-                    <textarea id="input_text" name="input_text" maxlength="1000" , oninput="countWords()"></textarea>
+                    <label for="input_text">This is a safe space, you are free to share what's on your mind and we will try our best to classify the emotion behind your diary entry.</label>
+                    <textarea id="input_text" name="input_text" maxlength="1000" , oninput="countWords()" style="font-family: Open Sans;"></textarea>
                     <div class="word-count">0/1000 characters</div>
                     <input type="submit" value="Classify">
                     <input type="button" value="Clear" id="clear-btn">
@@ -185,7 +188,7 @@
                 
             </div>
         <div class="footerContent">
-            <p style="bottom: 10%;">Developed by students from Technological Institute of the Philippines - Quezon City</p>
+            <p style="bottom: 10%;">Developed by the Muni Team</p>
         </div>
     </div>
 

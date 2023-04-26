@@ -11,27 +11,32 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 @app.route('/classifier')
 def classifier():
     return render_template("classifierPage.html")
 
-@app.route('/classifier/predict', methods=['POST'])
+@app.route('/classifier/predict/', methods=['POST'])
 async def predict():
     text = request.form.get('input_text')
     data = {"inputs": text}
     try:
         response = requests.post(API_URL, headers=headers, json=data)
         results = response.json()
-    except:
-        print("Entry is empty")
-    results = results[0][0]
-    label = results['label']
-    score = results['score']
-    rounded_score = round(score*100)
-    results['score'] = rounded_score
-    await asyncio.sleep(0.1)
-    print(label, score)
-    return results
+        results = results[0][0]
+        label = results['label']
+        score = results['score']
+        rounded_score = round(score*100)
+        results['score'] = rounded_score
+        await asyncio.sleep(0.1)
+        print(label, score)
+        return results
+    except Exception as e:
+        # print(f'Exception at {e}')
+        return render_template("errLanding.html")
 
 @app.route('/anger')
 def anger():
@@ -69,4 +74,4 @@ def surprise():
     return render_template("surprise.html", score=score)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
